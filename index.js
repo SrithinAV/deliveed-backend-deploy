@@ -18,7 +18,7 @@ const port = process.env.PORT;
 
 const corsOptions = {
     origin: (origin, callback) => {
-      if (['https://www.deliveed.com','https://deliveed.adaptable.app',].indexOf(origin) !== -1 || !origin) {
+      if (['https://www.deliveed.com','https://deliveed.adaptable.app','https://deliveed.netlify.app/',].indexOf(origin) !== -1 || !origin) {
         callback(null, true);
       } else {
         callback(new Error('Not allowed by CORS'));
